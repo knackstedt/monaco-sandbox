@@ -1,0 +1,22 @@
+{
+  "name": "@dotglitch/monaco-editor",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "cd src; npm version patch --force; git add ./package.json; git commit -m \"Increment version\"; cd ..; npm run build",
+    "publish": "cd dist && npm publish && cd ..",
+    "dev": "tsc --watch"
+  },
+  "files": [
+    "dist/monaco-editor"
+  ],
+  "private": true,
+  "dependencies": {
+    "monaco-editor": "^0.34.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "typescript": "~4.9.4"
+  }
+}
